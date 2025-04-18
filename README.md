@@ -10,3 +10,11 @@ public class FieldKeyword
    public int Stock { get; set => field = value > 0 ? value : throw new ArgumentOutOfRangeException(nameof(value), "Stock must be greater than 0"); }
 }
 ```
+
+## ❕ Nameof
+
+Nameof soporta tipo genericos sin enlazar:
+
+```csharp
+var name = nameof(List<>);
+```
